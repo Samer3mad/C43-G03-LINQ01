@@ -1,4 +1,4 @@
-﻿using System.Xml.Linq;
+﻿using static Demo.ListGenerator;
 
 namespace Demo
 {
@@ -203,6 +203,11 @@ namespace Demo
             #endregion
 
 
+            #endregion
+
+            #region Data Setup
+            Console.WriteLine(ProductList[0]);
+            Console.WriteLine(CustomerList[0]);
             #endregion
         }
     }
