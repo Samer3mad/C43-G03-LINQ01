@@ -206,8 +206,35 @@ namespace Demo
             #endregion
 
             #region Data Setup
-            Console.WriteLine(ProductList[0]);
-            Console.WriteLine(CustomerList[0]);
+            //Console.WriteLine(ProductList[0]);
+            //Console.WriteLine(CustomerList[0]);
+            #endregion
+
+            #region Filteration Operators - Where
+
+            //var res = ProductList.Where(P => P.UnitsInStock == 0); //Fluent Syntax
+
+            //var Res = from p in ProductList
+            //      where p.UnitsInStock == 0
+            //      select p;
+
+            //var Res = ProductList.Where(P => P.UnitsInStock == 0 && P.Category == "Meat/Poultry"); 
+            //
+            //var res = from P in ProductList
+            //          where P.UnitsInStock == 0 && P.Category == "Meat/Poultry"
+            //          select P;
+
+
+
+            // Indexed Where
+            //Valid only with Fluent Syntax
+            //var Res = ProductList.Where((P, I) => I < 10 && P.UnitsInStock == 0);
+            //
+            //
+            //foreach (var item in Res)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
         }
     }
