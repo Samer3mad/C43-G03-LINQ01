@@ -125,8 +125,8 @@ namespace Demo
             //1. Local L20       L2XML
             //2. Remote L2E
 
-            List<int> nums = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            var Odds = nums.Where((x) => x % 2 != 0).ToList();
+            //List<int> nums = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //var Odds = nums.Where((x) => x % 2 != 0).ToList();
 
             //foreach (var num in Odds)
             //{
@@ -162,6 +162,46 @@ namespace Demo
             //{
             //    Console.WriteLine(odd);
             //}
+
+            #endregion
+
+            #region LINQ Execution Ways
+            // INTERVIEW QUESTION..
+
+            // LINQ is +40 Extension for Built-Interface "IEnumerable", each extension can have one or more overloads
+            //      named as "LINQ Operators" existed in class "Enumerable
+            //      and divided into 13 category:-
+            //      10 Differed
+            //       3 Immediate
+
+            #region 1. Differed Execution
+            //List<int> nums = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            //var Result = nums.Where((x) => x % 2 != 0);
+
+            //nums.AddRange(new int[] { 11, 12, 13, 14, 15 });
+
+            //foreach (int odd in Result)
+            //{
+            //    Console.WriteLine(odd);
+            //} 
+            #endregion
+
+            #region 2. Immediate Execution [Element, Casting, Aggregate]
+            //List<int> nums = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //
+            //var Result = nums.Where((x) => x % 2 != 0).ToList();
+            //
+            //nums.AddRange(new int[] { 11, 12, 13, 14, 15 });
+            //
+            //
+            //foreach (int odd in Result)
+            //{
+            //    Console.WriteLine(odd);
+            //}
+
+            #endregion
+
 
             #endregion
         }
