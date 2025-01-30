@@ -125,13 +125,44 @@ namespace Demo
             //1. Local L20       L2XML
             //2. Remote L2E
 
-            //List<int> list = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            //var Odds = list.Where((x) => x % 2 != 0).ToList();
-            //
+            List<int> nums = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var Odds = nums.Where((x) => x % 2 != 0).ToList();
+
             //foreach (var num in Odds)
             //{
             //    Console.WriteLine(num);
             //}
+            #endregion
+
+            #region LINQ Syntax
+            #region 1. Fluent Syntax
+            // 1.1 Call "LINQ Operator" as static method through "Enumerabl" class
+
+            //var OddNums = Enumerable.Where<int>(nums, (X) => X % 2 != 0).ToList();
+
+
+            // 1.2 Call "LINQ Operator" as extension method [Recommended]
+
+            //OddNums = nums.Where((x) => x % 2 != 0).ToList();
+
+            #endregion
+
+            #region 2. Query Syntax [Query Expression]
+            //var OddNums = from N in nums 
+            //         where N % 2 != 0 
+            //         select N;
+
+
+            #endregion
+
+            //Fluent Syntax Faster than Query Syntax
+            //Query Syntax can use in complex queries
+
+            //foreach (int odd in OddNums)
+            //{
+            //    Console.WriteLine(odd);
+            //}
+
             #endregion
         }
     }
