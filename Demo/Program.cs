@@ -105,11 +105,33 @@ namespace Demo
             ///Static Method Calling
             ///int x = 12345;
             ///Console.WriteLine(IntExtension.Reverse(x));
-            
+
             ///Extension Method Calling
             ///int x = 12345;
             ///int y = x.Reverse();
             ///Console.WriteLine(y);
+            #endregion
+
+            #region What is LINQ..?
+            // LINQ: stands for Language-Integreted Query
+            // In C# we write LINQ not DataBase
+            // LINQ is +40 Extension for Built-Interface "IEnumerable", each extension can have one or more overloads
+            //      named as "LINQ Operators" existed in class "Enumerable
+            //      and divided into 13 category
+
+            // Use "LINQ Operators" against data stored in sequence, regardless data store [File, Database, Provider like SQL]
+
+            //Types of sequence:-
+            //1. Local L20       L2XML
+            //2. Remote L2E
+
+            //List<int> list = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //var Odds = list.Where((x) => x % 2 != 0).ToList();
+            //
+            //foreach (var num in Odds)
+            //{
+            //    Console.WriteLine(num);
+            //}
             #endregion
         }
     }
