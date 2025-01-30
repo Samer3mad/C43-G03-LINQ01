@@ -1,4 +1,6 @@
-﻿namespace Demo
+﻿using System.Xml.Linq;
+
+namespace Demo
 {
     internal class Program
     {
@@ -74,6 +76,29 @@
             #endregion
 
             //We will use var keyword always because var is TypeSafe
+            #endregion
+
+            #region Anonymous Type
+            var emp = new { Id = 7, Name = "Samer", Salary = 10_000 };
+            Console.WriteLine(emp.GetType().Name);
+            Console.WriteLine(emp);
+             //The object that will be created from Anonymous type is an Immutable object [Can't be changed]
+             //emp01.Id = 20; Invalid
+
+            //emp = new { Id = 11, emp.Name, emp.Salary };
+            //emp = emp with { Id = 20 }; //Syntax Sugar
+
+
+
+            var emp02 = new { Name = "Samir", Id = 10, Salary = 11_000 };
+            //The Smae Anonymous Type a long as:
+            // 1. the same properties Namig [case Sensitive]
+            // 2. The same properties order
+
+            Console.WriteLine(emp02.GetType().Name);
+            Console.WriteLine(emp02);
+            var product = new { ProductName = "Meat", Price = 20 };
+            Console.WriteLine(product.GetType().Name);
             #endregion
         }
     }
